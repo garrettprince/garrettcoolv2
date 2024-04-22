@@ -32,6 +32,7 @@ import PortfolioSection from "./PortfolioSection";
 import Montanahead from "./Montanahead";
 import LongAddition from "./LongAddition";
 import FaceTest from "./FaceTest"
+import Grass from "./Grass";
 
 export default function Scene({ action, setAction }) {
   return (
@@ -113,6 +114,8 @@ export default function Scene({ action, setAction }) {
       >
         <PortfolioSection action={action} setAction={setAction} />
       </Float>
+
+      {/* <Grass /> */}
       {/* <Float
         action={action}
         speed={1}
