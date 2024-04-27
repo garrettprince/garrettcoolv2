@@ -7,10 +7,14 @@ import {
 } from "@heroicons/react/24/solid";
 import { useEffect } from "react";
 import Link from "next/link";
+import InfoWindow from "./InfoWindow";
 
 export default function Overlay({ action, setAction }) {
   return (
     <main className="">
+
+    
+      
       {action != "home" && (
         <div>
           <XButton action={action} setAction={setAction} />

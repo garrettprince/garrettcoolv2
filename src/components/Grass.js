@@ -3,7 +3,7 @@ import * as THREE from "three"
 import React, { useRef, useMemo } from "react"
 import SimplexNoise from "simplex-noise"
 import { useFrame, useLoader } from "@react-three/fiber"
-import { Geometry } from "three/examples/jsm/deprecated/Geometry"
+// import { Geometry } from "three/examples/jsm/deprecated/Geometry"
 //These have been taken from "Realistic real-time grass rendering" by Eddie Lee, 2010
 import bladeDiffuse from "./resources/blade_diffuse.jpg"
 import bladeAlpha from "./resources/blade_alpha.jpg"

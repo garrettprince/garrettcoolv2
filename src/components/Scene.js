@@ -33,6 +33,8 @@ import Montanahead from "./Montanahead";
 import LongAddition from "./LongAddition";
 import FaceTest from "./FaceTest"
 import Grass from "./Grass";
+import GrassGeo from "./GrassGeo";
+import InfoWindow from "./InfoWindow";
 
 export default function Scene({ action, setAction }) {
   return (
@@ -52,9 +54,12 @@ export default function Scene({ action, setAction }) {
       <directionalLight position={[4, 5, 6]} intensity={1} color={"#fff"} />
       <directionalLight position={[1, 1, 1]} intensity={1} color={"#fff"} />
 
+      <GrassGeo />
+
+
       {/* <Environment preset="city" /> */}
 
-      {/* <OrbitControls /> */}
+      <OrbitControls />
 
       {/* Background Sphere */}
       {/* <Background action={action} setAction={setAction} /> */}
