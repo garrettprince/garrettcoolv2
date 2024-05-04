@@ -74,7 +74,7 @@ export default function Scene({ action, setAction }) {
       >
         <GarrettFace action={action} setAction={setAction} />
       </Float> */}
-      {/* <Float
+      <Float
         action={action}
         speed={1} // Animation speed, defaults to 1
         rotationIntensity={action === "home" ? 0.7 : 0.25} // XYZ rotation intensity, defaults to 1
@@ -82,7 +82,7 @@ export default function Scene({ action, setAction }) {
         floatingRange={action === "home" ? [0.1, -0.1] : [0.05, 0.05]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
       >
         <FaceTest action={action} setAction={setAction} />
-      </Float> */}
+      </Float>
       {/* <Float
         action={action}
         speed={1}
