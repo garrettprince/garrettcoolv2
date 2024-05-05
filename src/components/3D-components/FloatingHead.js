@@ -1,21 +1,14 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  Environment,
-  Float,
-  OrbitControls,
-  useGLTF,
-  useAnimations,
-} from "@react-three/drei";
-import { useState, useRef } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
 import { useSpring, animated } from "@react-spring/three";
 
-export default function Model({ action, setAction }) {
-  const { nodes, materials } = useGLTF("/facetest3.gltf");
+export default function FloatingHead({ action, setAction }) {
+  const { nodes, materials } = useGLTF("./models/facetest3.gltf");
 
   const { scale, position, rotation } = useSpring({
     scale: action !== "home" ? 0.4 : 0.95,
     position: action !== "home" ? [-1.2, -1.8, 0] : [0, 0.5, 0],
-    rotation: action !== "home" ? [-.1, 0.5, 0] : [0.2, 0, 0],
+    rotation: action !== "home" ? [-0.1, 0.5, 0] : [0.2, 0, 0],
   });
 
   const meshRef = useRef();
@@ -37,4 +30,4 @@ export default function Model({ action, setAction }) {
   );
 }
 
-useGLTF.preload("/facetest3.gltf");
+useGLTF.preload("/models/facetest3.gltf");

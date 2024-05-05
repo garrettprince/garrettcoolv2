@@ -1,17 +1,10 @@
 import { useFrame } from "@react-three/fiber";
-import {
-  Environment,
-  Float,
-  OrbitControls,
-  useGLTF,
-  useAnimations,
-} from "@react-three/drei";
-import { useState, useRef } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
 import { useSpring, animated } from "@react-spring/three";
-import * as THREE from "three";
 
-export default function PortfolioSection({ action, setAction, ...props }) {
-  const { nodes, materials } = useGLTF("/macbook_pro_copy.glb");
+export default function MacBook({ action, setAction, ...props }) {
+  const { nodes, materials } = useGLTF("./models/macbook_pro_copy.glb");
 
   const { scale, position, rotation } = useSpring({
     scale:
@@ -1067,4 +1060,4 @@ export default function PortfolioSection({ action, setAction, ...props }) {
   );
 }
 
-useGLTF.preload("/macbook_pro_copy.glb");
+useGLTF.preload("./models/macbook_pro_copy.glb");

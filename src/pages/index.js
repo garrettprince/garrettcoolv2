@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Scene from "../components/Scene";
-import Overlay from "../components/Overlay";
 import { useState } from "react";
 import DialogModal from "@/components/UI/DialogModal";
 
@@ -28,9 +27,6 @@ export default function Home() {
             content="Welcome to my portfolio! Click the button below to view my work."
           />
         </div>
-      </div>
-      <div className="">
-        <Overlay action={action} setAction={setAction} />
       </div>
     </div>
   );

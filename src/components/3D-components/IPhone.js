@@ -1,17 +1,10 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  Environment,
-  Float,
-  OrbitControls,
-  useGLTF,
-  useAnimations,
-} from "@react-three/drei";
-import { useState, useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
 import { useSpring, animated } from "@react-spring/three";
-import * as THREE from "three";
 
-export default function ContactPhone({ props, action, setAction }) {
-  const { nodes, materials } = useGLTF("/i_phone_14_pro_copy (1).glb");
+export default function IPhone({ props, action, setAction }) {
+  const { nodes, materials } = useGLTF("./models/i_phone_14_pro_copy (1).glb");
 
   const { scale, position } = useSpring({
     scale:
@@ -484,4 +477,4 @@ export default function ContactPhone({ props, action, setAction }) {
   );
 }
 
-useGLTF.preload("/i_phone_14_pro_copy (1).glb");
+useGLTF.preload("./models/i_phone_14_pro_copy (1).glb");

@@ -1,18 +1,11 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  Environment,
-  Float,
-  OrbitControls,
-  useGLTF,
-  useAnimations,
-} from "@react-three/drei";
-import { useState, useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
 import { useSpring, animated } from "@react-spring/three";
-import * as THREE from "three";
 
-export function PlayDate({ action, setAction, ...props }) {
+export default function PlayDate({ action, setAction, ...props }) {
   const { nodes, materials } = useGLTF(
-    "/playdate-handheld-console-by-panic.glb"
+    "./models/playdate-handheld-console-by-panic.glb"
   );
 
   const { scale, position } = useSpring({
@@ -218,4 +211,4 @@ export function PlayDate({ action, setAction, ...props }) {
   );
 }
 
-useGLTF.preload("/playdate-handheld-console-by-panic.glb");
+useGLTF.preload("./models/playdate-handheld-console-by-panic.glb");
