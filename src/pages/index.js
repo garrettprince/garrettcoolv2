@@ -2,7 +2,7 @@ import Head from "next/head";
 import Scene from "../components/Scene";
 import Overlay from "../components/Overlay";
 import { useState } from "react";
-import DialogWindow from "@/components/DialogWindow";
+import DialogModal from "@/components/UI/DialogModal";
 
 export default function Home() {
   const [action, setAction] = useState("home");
@@ -19,7 +19,14 @@ export default function Home() {
       </div>
       <div className=" flex justify-center pointer-events-none ">
         <div className="absolute flex pointer-events-auto">
-          <DialogWindow action={action} setAction={setAction} />
+          <DialogModal
+            action={action}
+            setAction={setAction}
+            primaryButtonTitle="Visit"
+            secondaryButtonTitle="Close"
+            buttonActions={true}
+            content="Welcome to my portfolio! Click the button below to view my work."
+          />
         </div>
       </div>
       <div className="">
