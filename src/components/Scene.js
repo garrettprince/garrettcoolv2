@@ -6,7 +6,7 @@ import { useSpring, animated } from "@react-spring/three";
 // Component imports
 import PlayDate from "./3D-components/PlayDate";
 import FloatingHead from "./3D-components/FloatingHead";
-import IPhone from "./3D-components/iPhone";
+import Phone from "./3D-components/Phone";
 import MacBook from "./3D-components/MacBook";
 
 export default function Scene({ action, setAction }) {
@@ -47,7 +47,7 @@ export default function Scene({ action, setAction }) {
         floatIntensity={0.7}
         floatingRange={[-0.04, 0.04]}
       >
-        <IPhone action={action} setAction={setAction} />
+        <Phone action={action} setAction={setAction} />
       </Float>
       <Float
         action={action}

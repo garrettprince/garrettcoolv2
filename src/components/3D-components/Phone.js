@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 import { useSpring, animated } from "@react-spring/three";
 
-export default function IPhone({ props, action, setAction }) {
+export default function Phone({ props, action, setAction }) {
   const { nodes, materials } = useGLTF("./models/i_phone_14_pro_copy (1).glb");
 
   const { scale, position } = useSpring({
