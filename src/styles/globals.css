@@ -15,6 +15,9 @@
     color: rgb(var(--foreground-rgb));
     background-image: url("/photos/dusk.jpg");
     background-size: cover;
+
+
+    cursor: url("/photos/mousetest.cur") 24 24, auto;
   }
 
   /* Light and dark mode */
