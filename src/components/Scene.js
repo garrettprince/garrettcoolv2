@@ -57,7 +57,7 @@ export default function Scene({ action, setAction }) {
           <MacBook action={action} setAction={setAction} />
         </Float>
       </Canvas>
-      <Loader />
+      {/* <Loader /> */}
     </>
   );
 }

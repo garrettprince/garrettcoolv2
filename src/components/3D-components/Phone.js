@@ -1,10 +1,12 @@
 import { useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
+import { Decal, useGLTF, useTexture } from "@react-three/drei";
 import { useRef } from "react";
 import { useSpring, animated } from "@react-spring/three";
+import VideoMesh from "./VideoMesh";
 
 export default function Phone({ props, action, setAction }) {
   const { nodes, materials } = useGLTF("./models/i_phone_14_pro_copy (1).glb");
+  const texture = useTexture("/photos/dusk.jpg");
 
   const { scale, position } = useSpring({
     scale:
@@ -20,11 +22,11 @@ export default function Phone({ props, action, setAction }) {
   const meshRef = useRef();
 
   // Subscribe this component to the render-loop, animating the mesh every frame
-  useFrame(() => {
-    action === "contactPhone"
-      ? (meshRef.current.rotation.y += 0.005)
-      : (meshRef.current.rotation.y = 0);
-  });
+  // useFrame(() => {
+  //   action === "contactPhone"
+  //     ? (meshRef.current.rotation.y += 0.005)
+  //     : (meshRef.current.rotation.y = 0);
+  // });
 
   return (
     <group {...props} dispose={null}>
@@ -330,19 +332,24 @@ export default function Phone({ props, action, setAction }) {
               position={[10.634, 18.946, 0.826]}
               scale={[1.018, 1.018, 1.037]}
             >
-              <mesh
+              {/* Display Photo */}
+              {/* <mesh
                 geometry={nodes.IMG_5648PNG.geometry}
                 material={nodes.IMG_5648PNG.material}
                 position={[-10.45, -18.61, 14.55]}
                 scale={[0.983, 0.982, 0.964]}
-              />
+              /> */}
+
+              {/* Screen */}
               <mesh
                 geometry={nodes.Screen_Border.geometry}
                 material={nodes.Screen_Border.material}
-                position={[-10.451, -18.606, 14.386]}
-                rotation={[-Math.PI, 0, Math.PI]}
+                position={[-10.451, -18.606, 5.386]}
                 scale={[1.079, 1.08, 1.065]}
-              />
+              >
+                {/* video mesh doesn't work at all */}
+                {/* <VideoMesh /> */}
+              </mesh>
               <mesh
                 geometry={nodes.Back_Side.geometry}
                 material={nodes.Back_Side.material}
