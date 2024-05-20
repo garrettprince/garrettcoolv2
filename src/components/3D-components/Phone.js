@@ -75,12 +75,7 @@ export default function Phone({ props, action, setAction }) {
                 position={[51.184, 0.075, 0]}
                 rotation={[Math.PI / 2, 0, 0]}
               />
-              <mesh
-                geometry={nodes.Ellipse_3.geometry}
-                material={nodes.Ellipse_3.material}
-                position={[43.184, 0.075, 0]}
-                rotation={[Math.PI / 2, 0, 0]}
-              />
+
               <mesh
                 geometry={nodes.Ellipse_6_2.geometry}
                 material={nodes.Ellipse_6_2.material}
