@@ -38,30 +38,16 @@ export default function Phone({ props, action, setAction }) {
       >
         <group position={[-0.296, 20.845, -4.123]}>
           <group position={[0.099, 7.825, 4.123]}>
+            {/* Front Camera */}
             <group position={[-11.5, 252.794, 15.883]}>
-              <group position={[11.579, -12.261, 1.281]}>
-                <mesh
-                  geometry={nodes.Ellipse_2.geometry}
-                  material={nodes.Ellipse_2.material}
-                  position={[27.831, 0.003, -0.346]}
-                />
-                <mesh
-                  geometry={nodes.Ellipse.geometry}
-                  material={nodes.Ellipse.material}
-                  position={[27.831, 0.003, -0.814]}
-                />
-                <mesh
-                  geometry={nodes.Rectangle.geometry}
-                  material={nodes.Rectangle.material}
-                  position={[0, 0, -1.067]}
-                />
-              </group>
               <mesh
                 geometry={nodes.Rectangle_5.geometry}
                 material={nodes.Rectangle_5.material}
                 position={[11.5, 8.794, -0.007]}
               />
             </group>
+
+            {/* Internal */}
             <group position={[7.816, -269.075, 0]}>
               <mesh
                 geometry={nodes.Ellipse_6.geometry}
@@ -124,6 +110,8 @@ export default function Phone({ props, action, setAction }) {
                 rotation={[Math.PI / 2, 0, 0]}
               />
             </group>
+
+            {/* Apple Logo */}
             <group
               position={[26.328, 59.317, -14.804]}
               rotation={[-Math.PI, 0, -Math.PI]}
@@ -140,6 +128,8 @@ export default function Phone({ props, action, setAction }) {
                 position={[423, -1, 0.01]}
               />
             </group>
+
+            {/* Camera Module */}
             <group position={[52.978, 191.101, -23.025]} scale={1.159}>
               <mesh
                 geometry={nodes.Cube_2.geometry}
@@ -155,6 +145,8 @@ export default function Phone({ props, action, setAction }) {
                 rotation={[-Math.PI, 0, -Math.PI]}
                 scale={0.863}
               />
+
+              {/* Flash */}
               <group
                 position={[-25.872, 36.929, -1.908]}
                 scale={[0.939, 0.939, 0.846]}
@@ -181,6 +173,8 @@ export default function Phone({ props, action, setAction }) {
                   scale={[0.913, 0.913, 1]}
                 />
               </group>
+
+              {/* Other Flash */}
               <mesh
                 geometry={nodes.Ellipse_3_1.geometry}
                 material={nodes.Ellipse_3_1.material}
@@ -188,6 +182,8 @@ export default function Phone({ props, action, setAction }) {
                 rotation={[-Math.PI, 0, Math.PI]}
                 scale={[0.857, 0.857, 0.846]}
               />
+
+              {/* Camera 1 */}
               <group position={[25.454, -30.011, -0.782]} scale={0.864}>
                 <mesh
                   geometry={nodes.Ellipse_7.geometry}
@@ -199,12 +195,6 @@ export default function Phone({ props, action, setAction }) {
                   geometry={nodes.Ellipse_6_3.geometry}
                   material={nodes.Ellipse_6_3.material}
                   position={[0, 0, 0.496]}
-                  rotation={[-Math.PI, 0, Math.PI]}
-                />
-                <mesh
-                  geometry={nodes.Ellipse_10.geometry}
-                  material={nodes.Ellipse_10.material}
-                  position={[-0.167, -0.123, -2.074]}
                   rotation={[-Math.PI, 0, Math.PI]}
                 />
                 <mesh
@@ -239,6 +229,8 @@ export default function Phone({ props, action, setAction }) {
                   rotation={[-Math.PI, 0, Math.PI]}
                 />
               </group>
+
+              {/* Camera 2 */}
               <group position={[-25.302, -2.156, -0.782]} scale={0.864}>
                 <mesh
                   geometry={nodes.Ellipse_7_1.geometry}
@@ -250,12 +242,6 @@ export default function Phone({ props, action, setAction }) {
                   geometry={nodes.Ellipse_6_4.geometry}
                   material={nodes.Ellipse_6_4.material}
                   position={[0, 0, 0.496]}
-                  rotation={[-Math.PI, 0, Math.PI]}
-                />
-                <mesh
-                  geometry={nodes.Ellipse_10_1.geometry}
-                  material={nodes.Ellipse_10_1.material}
-                  position={[-0.167, -0.123, -2.074]}
                   rotation={[-Math.PI, 0, Math.PI]}
                 />
                 <mesh
@@ -290,6 +276,8 @@ export default function Phone({ props, action, setAction }) {
                   rotation={[-Math.PI, 0, Math.PI]}
                 />
               </group>
+
+              {/* Camera 3 */}
               <group position={[26.183, 23.962, -0.782]} scale={0.864}>
                 <mesh
                   geometry={nodes.Ellipse_7_2.geometry}
@@ -301,12 +289,6 @@ export default function Phone({ props, action, setAction }) {
                   geometry={nodes.Ellipse_6_5.geometry}
                   material={nodes.Ellipse_6_5.material}
                   position={[0, 0, 0.496]}
-                  rotation={[-Math.PI, 0, Math.PI]}
-                />
-                <mesh
-                  geometry={nodes.Ellipse_10_2.geometry}
-                  material={nodes.Ellipse_10_2.material}
-                  position={[-0.167, -0.123, -2.074]}
                   rotation={[-Math.PI, 0, Math.PI]}
                 />
                 <mesh
@@ -342,6 +324,8 @@ export default function Phone({ props, action, setAction }) {
                 />
               </group>
             </group>
+
+            {/* Majority of Body */}
             <group
               position={[10.634, 18.946, 0.826]}
               scale={[1.018, 1.018, 1.037]}
@@ -446,6 +430,7 @@ export default function Phone({ props, action, setAction }) {
                 scale={[1.079, 1.08, 1.065]}
               />
             </group>
+
             <mesh
               geometry={nodes.Rectangle_4.geometry}
               material={nodes.Rectangle_4.material}
