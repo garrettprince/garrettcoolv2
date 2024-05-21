@@ -342,6 +342,7 @@ export default function Phone({ props, action, setAction }) {
                 position={[-10.451, -18.606, 5.386]}
                 scale={[1.079, 1.08, 1.065]}
               >
+                {/*  */}
                 {/* video mesh doesn't work at all */}
                 {/* <VideoMesh /> */}
               </mesh>

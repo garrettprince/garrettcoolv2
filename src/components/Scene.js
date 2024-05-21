@@ -8,6 +8,7 @@ import PlayDate from "./3D-components/PlayDate";
 import FloatingHead from "./3D-components/FloatingHead";
 import Phone from "./3D-components/Phone";
 import MacBook from "./3D-components/MacBook";
+import Grass from "./3D-components/Grass";
 
 export default function Scene({ action, setAction }) {
   return (
@@ -19,7 +20,7 @@ export default function Scene({ action, setAction }) {
         <directionalLight position={[1, 1, 1]} intensity={1} color={"#fff"} />
         {/* Camera */}
         <OrbitControls />
-        {/* Objects */}
+        Objects
         <Float
           action={action}
           speed={1} // Animation speed, defaults to 1
@@ -56,8 +57,11 @@ export default function Scene({ action, setAction }) {
         >
           <MacBook action={action} setAction={setAction} />
         </Float>
+        {/* Find out why loader doesn't work */}
+        {/* <Loader /> */}
+        {/* Find out why grass component doesn't render */}
+        {/* <Grass /> */}
       </Canvas>
-      {/* <Loader /> */}
     </>
   );
 }
