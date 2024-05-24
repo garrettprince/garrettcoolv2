@@ -1,7 +1,8 @@
-import Head from "next/head";
-import Scene from "../components/Scene";
 import { useState } from "react";
-import DialogModal from "@/components/UI/DialogModal";
+import Head from "next/head";
+import Scene from "../components/3D-components/Scene";
+import UIContainer from "@/components/UI/UIContainer";
+import AudioPlayer from "@/components/UI/AudioPlayer";
 
 export default function Home() {
   const [action, setAction] = useState("home");
@@ -16,17 +17,13 @@ export default function Home() {
       <div className="absolute w-full h-full">
         <Scene action={action} setAction={setAction} />
       </div>
-      <div className=" flex justify-center pointer-events-none ">
-        <div className="absolute flex pointer-events-auto">
-          <DialogModal
-            action={action}
-            setAction={setAction}
-            primaryButtonTitle="Visit"
-            secondaryButtonTitle="Close"
-            buttonActions={true}
-            content="Welcome to my portfolio! Click the button below to view my work."
-          />
+      <div className=" flex justify-center pointer-events-none h-full w-full">
+        <div className=" flex flex-col pointer-events-auto items-center w-full">
+          <UIContainer action={action} setAction={setAction} />
         </div>
+        <section className="absolute bottom-0 right-0 pointer-events-none">
+          <AudioPlayer />
+      </section>
       </div>
     </div>
   );

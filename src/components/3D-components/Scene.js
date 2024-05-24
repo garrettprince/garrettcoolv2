@@ -1,14 +1,16 @@
 // Package imports
 import { Canvas } from "@react-three/fiber";
-import { Float, Loader, OrbitControls } from "@react-three/drei";
+import { Float, Loader, OrbitControls, Html } from "@react-three/drei";
 import { useSpring, animated } from "@react-spring/three";
+import { Flex, Box } from "@react-three/flex";
 
 // Component imports
-import PlayDate from "./3D-components/PlayDate";
-import FloatingHead from "./3D-components/FloatingHead";
-import Phone from "./3D-components/Phone";
-import MacBook from "./3D-components/MacBook";
-import Grass from "./3D-components/Grass";
+import PlayDate from "./PlayDate";
+import FloatingHead from "./FloatingHead";
+import Phone from "./Phone";
+import MacBook from "./MacBook";
+import Grass from "./Grass";
+import PrimaryButton from "../UI/PrimaryButton";
 
 export default function Scene({ action, setAction }) {
   return (
@@ -19,8 +21,8 @@ export default function Scene({ action, setAction }) {
         <directionalLight position={[4, 5, 6]} intensity={1} color={"#fff"} />
         <directionalLight position={[1, 1, 1]} intensity={1} color={"#fff"} />
         {/* Camera */}
-        <OrbitControls />
-        Objects
+        {/* <OrbitControls /> */}
+
         <Float
           action={action}
           speed={1} // Animation speed, defaults to 1
@@ -60,7 +62,28 @@ export default function Scene({ action, setAction }) {
         {/* Find out why loader doesn't work */}
         {/* <Loader /> */}
         {/* Find out why grass component doesn't render */}
-        {/* <Grass /> */}
+        <Grass />
+        {/* <Html wrapperClass="text-white relative" >
+          <div className="flex justify-end">
+            <PrimaryButton primaryButtonTitle="Click" />
+          </div>
+        </Html> */}
+        <Flex flexDirection="row">
+          <Box>
+            {/* <Html>
+              <div className="text-white">
+                <PrimaryButton primaryButtonTitle="Click" />
+              </div>
+            </Html> */}
+            <FloatingHead action={action} setAction={setAction} />
+          </Box>
+          <Box padding={1}>
+            <FloatingHead action={action} setAction={setAction} />
+          </Box>
+          <Box>
+            <FloatingHead action={action} setAction={setAction} />
+          </Box>
+        </Flex>
       </Canvas>
     </>
   );
