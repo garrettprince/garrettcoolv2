@@ -69,17 +69,17 @@ export default function Scene({ action, setAction }) {
         </Float>
         {/* Find out why grass component doesn't render */}
         <Grass />
-        {/* <Html className="flex flex-col md:flex-row items-center md:items-start">
+        <Html className="flex flex-col md:flex-row items-center md:items-start">
           <div className="p-1">
-            <FloatingHead action={action} setAction={setAction} />
+
           </div>
           <div className="p-1">
-            <FloatingHead action={action} setAction={setAction} />
+
           </div>
           <div className="p-1">
-            <FloatingHead action={action} setAction={setAction} />
+
           </div>
-        </Html> */}
+        </Html>
         {/* <Flex flexDirection="row">
           <Box>
             

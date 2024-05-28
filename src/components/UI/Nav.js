@@ -4,6 +4,7 @@ function Nav() {
   return (
     <section className="text-white text-sm w-full">
       <div className="flex justify-end items-center py-4 px-6">
+        <p>test</p>
         <ul className="flex space-x-4">
           <li>Work</li>
           <li>About</li>

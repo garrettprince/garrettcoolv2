@@ -5,7 +5,7 @@ import AudioPlayer from "./AudioPlayer";
 
 function UIContainer({ action, setAction }) {
   return (
-    <>
+    <div className=" flex flex-col  items-center jusitfy-between w-full h-screen">
       <Nav />
       <DialogModal
         action={action}
@@ -15,8 +15,7 @@ function UIContainer({ action, setAction }) {
         buttonActions={true}
         content="Welcome to my portfolio! Click the button below to view my work."
       />
-      <AudioPlayer />
-    </>
+    </div>
   );
 }
 
