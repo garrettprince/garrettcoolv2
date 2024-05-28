@@ -9,7 +9,7 @@ export default function SecondaryButton({ secondaryButtonTitle }) {
     <>
       <button
         onClick={() => setDialogModal(false)}
-        className="m-4 px-4 py-1 text-white/75 active:text-white/50 hover:text-white/90 transition-all transform"
+        className="m-4 px-6 py-1 text-white/75 active:text-white/50 hover:text-white/90 transition-all transform"
       >
         {secondaryButtonTitle}
       </button>

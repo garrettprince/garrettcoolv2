@@ -14,9 +14,11 @@ export default function Home() {
         <meta name="description" content="All things Garrett" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      {/* 3D Scene */}
       <div className="absolute w-full h-full">
         <Scene action={action} setAction={setAction} />
       </div>
+      {/* UI Container */}
       <div className=" flex justify-center pointer-events-none h-full w-full">
         <div className=" flex flex-col pointer-events-auto items-center w-full">
           <UIContainer action={action} setAction={setAction} />

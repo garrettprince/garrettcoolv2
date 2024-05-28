@@ -15,7 +15,7 @@ function UIContainer({ action, setAction }) {
         buttonActions={true}
         content="Welcome to my portfolio! Click the button below to view my work."
       />
-      
+      <AudioPlayer />
     </>
   );
 }

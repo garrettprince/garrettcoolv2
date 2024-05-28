@@ -1,15 +1,19 @@
+import { extend } from '@react-three/fiber';
+import GrassMaterial from './GrassMaterial';
+extend({ GrassMaterial });
+
 import * as THREE from 'three';
 import React, { useRef, useMemo } from 'react';
 import SimplexNoise from 'simplex-noise';
 import { useFrame, useLoader } from '@react-three/fiber';
-import './GrassMaterial';
+
 
 const simplex = new SimplexNoise(Math.random);
 
 export default function Grass({ options = { bW: 0.12, bH: 1, joints: 5 }, width = 100, instances = 50000, ...props }) {
   const { bW, bH, joints } = options;
   const materialRef = useRef();
-
+console.log("Grass")
   // Use direct paths from the public folder
   const [texture, alphaMap] = useLoader(THREE.TextureLoader, [
     '/blade_diffuse.jpg',
