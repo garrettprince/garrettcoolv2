@@ -29,17 +29,19 @@ export default function Scene({ action, setAction }) {
         <directionalLight position={[4, 5, 6]} intensity={1} color={"#fff"} />
         <directionalLight position={[1, 1, 1]} intensity={1} color={"#fff"} />
         {/* Camera */}
-        <OrbitControls />
+        {/* <OrbitControls /> */}
 
+        <PerspectiveCamera>
           <Float
             action={action}
             speed={1} // Animation speed, defaults to 1
-            rotationIntensity={action === "home" ? 0.7 : 0.25} // XYZ rotation intensity, defaults to 1
+            rotationIntensity={action === "home" ? 0.2 : 0.15} // XYZ rotation intensity, defaults to 1
             floatIntensity={0.3} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-            floatingRange={action === "home" ? [-0.05, 0.05] : [0.025, 0.025]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+            floatingRange={action === "home" ? [-0.02, 0.02] : [-0.02, 0.02]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
           >
             <FloatingHead action={action} setAction={setAction} />
           </Float>
+        </PerspectiveCamera>
         {/* <Float
           action={action}
           speed={1}

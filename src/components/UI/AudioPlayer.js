@@ -10,7 +10,7 @@ function AudioPlayer() {
   // STATE //
   ///////////
 
-  const [isHovered, setIsHovered] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [player, setPlayer] = useState(null);
   const [volume, setVolume] = useState(1.0);

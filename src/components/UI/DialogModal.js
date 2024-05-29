@@ -34,7 +34,7 @@ function DialogModal({
   }, [fullText]);
 
   return (
-    <section className="text-white text-sm ">
+    <section className="text-white text-sm">
       {/* {dialogModal && ( */}
         <div className="w-64 flex flex-col bg-[#B3B3B3]/20 backdrop-blur-xl rounded-2xl mt-20 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] border-t-[1px] border-b-[1px] border-t-[#B3B3B3]/80 border-b-black/20">
           {/* Render text content */}
