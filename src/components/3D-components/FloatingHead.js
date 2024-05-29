@@ -6,9 +6,9 @@ export default function FloatingHead({ action, setAction }) {
   const { nodes, materials } = useGLTF("./models/facetest3.gltf");
 
   const { scale, position, rotation } = useSpring({
-    scale: action !== "home" ? 0.4 : 0.3,
-    position: action !== "home" ? [-3.2, -1.8, 0] : [0, 0.5, 0],
-    rotation: action !== "home" ? [-0.1, 0.5, 0] : [0.2, 0, 0],
+    scale: action !== "home" ? 0.35 : 0.25,
+    position: action !== "home" ? [0, 2, 0] : [0, 3, 0],
+    rotation: action !== "home" ? [-0.1, 0, 0] : [0.25, 0, 0],
   });
 
   const meshRef = useRef();

@@ -10,7 +10,7 @@ function AudioPlayer() {
   // STATE //
   ///////////
 
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const [player, setPlayer] = useState(null);
   const [volume, setVolume] = useState(1.0);
@@ -63,29 +63,26 @@ function AudioPlayer() {
       className="text-white flex flex-col bg-[#B3B3B3]/40 backdrop-blur-xl rounded-2xl mt-20 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] border-t-[1px] border-b-[1px] border-t-[#B3B3B3]/80 border-b-black/20 m-4 justify-center items-center"
     >
       {/* MUSIC NOTE INDICATOR */}
-      {/* {!isHovered && ( */}
-      {/* <animated.div> */}
-      {/* <MusicalNoteIcon
-            className={`${
-              isHovered === true ? "hidden" : "h-6 w-6 m-4 text-white/80"
-            }`}
-          /> */}
-      {/* <img src={songData1.albumArt} className="h-14 w-14 rounded-lg" />
-        </animated.div> */}
-      {/* )} */}
+      <animated.div>
+        <MusicalNoteIcon
+          style={fadeOut}
+          className={`${
+            isHovered === true ? "hidden" : "h-6 w-6 m-4 text-white/80"
+          }`}
+        />
+      </animated.div>
 
-      {/*  */}
-      <section style={fadeIn} className={isHovered && isPlaying ? `flex w-[19rem]` : `flex`}>
-        <div className="flex justify-between items-center">
+
+      {isHovered && (
+        <section style={fadeIn} className="flex w-[19rem]">
+          <div className="flex justify-between items-center"></div>
           <img src={songData1.albumArt} className="h-14 w-14 rounded-lg" />
-        </div>
-        {isHovered && (
           <animated.div className="flex flex-col ml-2">
             <p className="text-xs font-bold">{songData1.songTitle}</p>
             <p className="text-xs">{songData1.artist}</p>
           </animated.div>
-        )}
-      </section>
+        </section>
+      )}
     </animated.div>
   );
 }

@@ -12,7 +12,7 @@ function DialogModal({
   content,
   buttonActions,
 }) {
-  const [dialogModal, setDialogModal] = useAtom(dialogModalOpen);
+  // const [dialogModal, setDialogModal] = useAtom(dialogModalOpen);
 
   const [text, setText] = useState("");
   const fullText = content;
@@ -35,10 +35,10 @@ function DialogModal({
 
   return (
     <section className="text-white text-sm ">
-      {dialogModal && (
-        <div className="w-64 flex flex-col bg-[#B3B3B3]/20 backdrop-blur-xl rounded-2xl max-w-64 mt-20 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] border-t-[1px] border-b-[1px] border-t-[#B3B3B3]/80 border-b-black/20">
+      {/* {dialogModal && ( */}
+        <div className="w-64 flex flex-col bg-[#B3B3B3]/20 backdrop-blur-xl rounded-2xl mt-20 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] border-t-[1px] border-b-[1px] border-t-[#B3B3B3]/80 border-b-black/20">
           {/* Render text content */}
-          <div className="my-3 mx-4">{text}</div>
+          <div className="my-3 mx-4" style={{ pointerEvents: "none" }}>{text}</div>
 
           {/* If dialog has button actions, render below */}
           {buttonActions && (
@@ -48,7 +48,7 @@ function DialogModal({
             </section>
           )}
         </div>
-      )}
+      {/* )} */}
     </section>
   );
 }
